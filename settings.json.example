@@ -1,0 +1,12 @@
+{
+    "filePath": "my_maps/ostergotland_map/terrang/05/",
+    "files": [
+        {"file": "hl_05", "name": "Water streams"},
+        {"file": "my_05", "name": "Soil type"},
+        {"file": "vo_05", "name": "Small roads and trails"},
+        {"file": "vl_05", "name": "Roads"},
+        {"file": "kl_05", "name": "Power grid"},
+        {"file": "by_05", "name": "Large buildings"},
+        {"file": "oh_05", "name": "Elevation info"}
+    ]
+}

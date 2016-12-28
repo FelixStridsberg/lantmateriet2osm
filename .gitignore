@@ -1,0 +1,8 @@
+_build
+local
+*_map
+*.osm
+*.native
+*.byte
+styles/
+settings.json
