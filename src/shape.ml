@@ -24,7 +24,7 @@ type poly = {
   parts : point list list
 }
 
-type shape = Polyline of poly | Polygon of poly
+type shape = Point of point | Polyline of poly | Polygon of poly
 
 let validate_shp_sign input =
   assert(input_byte input = 0x00);
@@ -89,6 +89,7 @@ let read_shape input =
   ignore (really_input_string input 8); (* Record length, content length *)
   let shape_type = input_i32le input in
   match shape_type with
+  | 1 -> Point (read_point input)
   | 3 -> Polyline (read_poly_content input)
   | 5 -> Polygon (read_poly_content input)
   | _ -> raise (Failure ("Unknown shape: " ^ (string_of_int shape_type)))

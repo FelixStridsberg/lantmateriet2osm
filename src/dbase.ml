@@ -4,13 +4,13 @@ exception DbTypeError of string
 exception DbReadError of string
 exception DbNotFound of string
 
-type value = Int of int | String of string
+type value = Integer of int | String of string | Float of float
 
 type record = {
   columns : (string * value) list
 }
 
-type field_type = Number of int | String of int
+type field_type = IntField of int | FloatField of int | StringField of int
 
 type field_header = {
   name       : string;
@@ -38,13 +38,15 @@ let read_record_header input =
         let field_type = input_char input in
         for i = 1 to 4 do ignore (input_byte input); done; (* address in memory *)
         let field_length = input_byte input in
-        ignore (input_byte input); (* Decimal count, don't need it *)
+        let dec_count = input_byte input in (* Decimal count, don't need it *)
         for i = 1 to 14 do ignore (input_byte input); done; (* lan, reserved and stuff *)
         {
             name = (Char.escaped (Char.chr first_byte)) ^ field_name;
             field_type = match field_type with
-                | 'C' -> (String field_length)
-                | 'N' -> (Number field_length)
+                | 'C' -> (StringField field_length)
+                | 'N' -> if dec_count = 0
+                         then (IntField field_length)
+                         else (FloatField field_length)
                 | _ -> raise @@  DbTypeError ("Unsupported type: " ^ (Char.escaped field_type))
         } :: aux ()
     ) in
@@ -57,14 +59,21 @@ let read_db_int input length =
     int_of_string @@ String.trim raw
   with Failure x -> raise (DbReadError x)
 
+let read_db_float input length =
+  try
+    let raw = really_input_string input length in
+    float_of_string @@ String.trim raw
+  with Failure x -> raise (DbReadError x)
+
 let read_db_string input length =
   String.trim @@ really_input_string input length
 
 let next t =
   ignore (input_byte t.input); (* Space for non deleted * for deleted *)
-  let read_field ft = match ft with
-    | Number l -> Int (read_db_int t.input l)
-    | String l -> String (read_db_string t.input l) in
+  let read_field = function
+    | IntField l -> Integer (read_db_int t.input l)
+    | StringField l -> String (read_db_string t.input l)
+    | FloatField l -> Float (read_db_float t.input l) in
   let columns =
     List.map (fun h -> (h.name, read_field h.field_type)) t.header.fields
   in
@@ -72,7 +81,7 @@ let next t =
 
 let get_int record name =
   match List.assoc name record.columns with
-  | Int i -> i
+  | Integer i -> i
   | _ -> raise @@ DbTypeError (name ^ " is not an int")
   | exception Not_found -> raise @@ DbNotFound (name ^ " was not found")
 

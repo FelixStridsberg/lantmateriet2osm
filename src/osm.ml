@@ -68,7 +68,16 @@ let write_node t id point =
   let (output, _) = t.node_out in
   let long, lat = Sweref99tm.to_wgs point.lat point.long in
   let html = Printf.sprintf "\t<node id=\"%d\" visible=\"true\" version=\"1\" lat=\"%f\" lon=\"%f\"/>\n"
-  id lat long in
+               id lat long in
+  log_coordinate t long lat;
+  output_string output html
+
+let write_point t id point tag =
+  let output, _ = t.node_out in
+  let long, lat = Sweref99tm.to_wgs point.lat point.long in
+  let key, value = tag in
+  let html = Printf.sprintf ("\t<node id=\"%d\" visible=\"true\" version=\"1\" lat=\"%f\" lon=\"%f\">\n\t<tag k=\"%s\" v=\"%s\"/>\n</node>\n")
+                id lat long key value in
   log_coordinate t long lat;
   output_string output html
 
@@ -110,6 +119,10 @@ let write_relation_member t rel_type role id =
 let write_relation_attributes t kkod (key, value) =
   write_relation_tag t key value;
   write_relation_tag t "kkod" (string_of_int kkod)
+
+let add_point_shape t kkod point tag =
+  let rel_id = get_id t in
+  write_point t rel_id point tag
 
 let add_polyline_shape t kkod shape tag =
   try

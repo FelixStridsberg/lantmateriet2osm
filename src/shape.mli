@@ -19,7 +19,7 @@ type poly = {
   parts : point list list
 }
 
-type shape = Polyline of poly | Polygon of poly
+type shape = Point of point | Polyline of poly | Polygon of poly
 
 (** .shp filename -> .dbf filename -> t *)
 val make : string -> string -> t

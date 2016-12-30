@@ -19,6 +19,7 @@ let read_all settings files osm =
           | None -> read_shapes (x - 1) new_progress
           | Some tag ->
               (match shape with
+              | Point point -> Osm.add_point_shape osm kkod point tag
               | Polyline poly -> Osm.add_polyline_shape osm kkod poly tag
               | Polygon poly -> Osm.add_polygon_shape osm kkod poly tag);
               read_shapes (x - 1) new_progress
@@ -58,7 +59,11 @@ let () =
     print_endline "\nSaving styles...";
     Style.write_styles (Settings.style_def settings) "styles/";
     print_endline "All done!"
-  with Failure e ->
-    Osm.close osm;
-    print_endline @@ "Fatal error: " ^ e
+  with
+    | Failure e ->
+        Osm.close osm;
+        print_endline @@ "Fatal error: " ^ e;
+    | e ->
+        Osm.close osm;
+        raise e
 

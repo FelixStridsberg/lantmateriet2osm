@@ -47,6 +47,7 @@ module Style = struct
       Polygon { font_style = NoLabel; } in (* TODO implement. *)
     let parse_object_type otype json =
       match otype with
+      | "point" -> Point
       | "line" -> parse_line_object json
       | "polygon" -> parse_polygon_object json
       | t -> raise @@ Failure ("Failed to parse style definition. Unknown type: " ^ t) in
