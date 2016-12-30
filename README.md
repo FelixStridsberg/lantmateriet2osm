@@ -1,7 +1,7 @@
 This project is in pre alpha state. The maps generated will lack some elements, and style and details is not yet configurable.
 
 # Lantmäteriet's maps to osm
-This is a converter to convert [Lantmäteriet's](https://www.lantmateriet.se/) maps (shape format) to the [OpenStreetMap](https://www.lantmateriet.se/) (OSM) format. (Currently only supporting the XML version, which may yield very big map files.)
+This is a converter to convert [Lantmäteriet's](https://www.lantmateriet.se/) maps (shape format) to the [OpenStreetMap](http://wiki.openstreetmap.org/wiki/OSM_XML) (OSM) format. (Currently only supporting the XML version, which may yield very big map files.)
 
 Lantmäteriet, or the Swedish National Land Survey, is a government agency in Sweden.
 They started releasing very detailed map data under Creative Common license during 2016.
