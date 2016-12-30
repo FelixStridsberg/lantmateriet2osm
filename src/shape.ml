@@ -94,7 +94,8 @@ let read_shape input =
   | _ -> raise (Failure ("Unknown shape: " ^ (string_of_int shape_type)))
 
 let next t =
-  (read_shape t.input, Dbase.next t.dbase)
+  let data = Dbase.next t.dbase in
+  (read_shape t.input, Dbase.get_int data "KKOD")
 
 let length t =
     Dbase.record_count t.dbase

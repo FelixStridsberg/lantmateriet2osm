@@ -12,9 +12,9 @@ My goal with this project is to run these detailed (and free) maps on my hiking 
 This software cannot currently convert maps directly into a format that garmin devices understand (gmap). But there is an open source project called [mkgmap](http://www.mkgmap.org.uk/) which can convert from OSM to gmap.
 
 ### Example to run lantmäteriet's maps on garmin:
-First download the maps from [Lantmäteriet](https://www.lantmateriet.se/sv/Kartor-och-geografisk-information/Kartor/oppna-data/hamta-oppna-geodata/#faq:gsd-terrangkartan-vektor) in `shape` format (I've only tested the terrain map), then modify the settings.json.example to fit your file system. And then run:
+First download the maps from [Lantmäteriet](https://www.lantmateriet.se/sv/Kartor-och-geografisk-information/Kartor/oppna-data/hamta-oppna-geodata/#faq:gsd-terrangkartan-vektor) in `shape` format (I've only tested the terrain map). And then run:
 ```sh
-./lantmateriet2osm.native settings.json
+./lantmateriet2osm lantmateriet.json style.json /path/to/map/folder/
 ```
 `lantmateriet2osm` will create a `map.osm` file containing the map data, and a folder called `style/` containing style data for the map supported by mkgmap (currently hard coded, will implement a style.json format in the future.). To convert this to gmap you can use `mkgmap`: (for details, see docs of [mkgmap](http://www.mkgmap.org.uk/))
 ```sh
@@ -23,3 +23,11 @@ java -jar splitter.jar map.osm > splitter.log
 java -jar mkgmap.jar --style-file=styles --family-id=909 --gmapsupp *.pbf *.typ
 ```
 That will generate a `gmapsupp.img` file which can be put on a garmin gps device. Never upload a generated map to the internal memory of the gps, always use external sd-card and read the documentation of mkgmap before proceeding to avoid bricking your gps.
+
+### Warning
+There is currently no support to render elements with the same item code differently.
+Here is some conflicts in Lantmäteriet's maps to be aware of:
+```
+16 Military restricted area   -  16 Recreational buildings
+17 Military shooting range    -  17 Open land
+```

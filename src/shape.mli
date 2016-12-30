@@ -26,6 +26,6 @@ val make : string -> string -> t
 
 val length : t -> int
 
-val next : t -> shape * Dbase.record
+val next : t -> shape * int
 
 val close : t -> unit

@@ -1,5 +1,5 @@
 (**
- * Converts coordinates from SWEREF 90 to GRS 80
+ * Converts coordinates from SWEREF 99 to GRS 80
  *
  * For info see:
  * https://www.lantmateriet.se/globalassets/kartor-och-geografisk-information/gps-och-matning/geodesi/formelsamling/gauss_conformal_projection.pdf

@@ -1,0 +1,581 @@
+{
+    "items": {
+        "natural_water": [1],
+        "natural_marsh": [18]
+    },
+    "debug": {
+        "natural_forest": [2, 19],
+        "natural_field": [5, 17],
+
+        "landuse_farmland": [4, 7],
+        "landuse_residential3": [12],
+        "landuse_residential2": [13],
+        "landuse_residential1": [14],
+        "landuse_industrial": [15, 2670],
+        "landuse_recreational": [16],
+
+        "way_trail": [264, 5095],
+        "way_marked_trail": [265, 268],
+        "way_lighted_trail": [266],
+        "way_bicycle_path": [5098],
+        "way_highway": [5011, 5811],
+        "way_class1": [5022, 5032, 5822, 5832],
+        "way_class2": [5025, 5033, 5044, 5825, 5833],
+        "way_class3": [5029, 5034, 5829, 5834],
+        "way_street_big": [5051, 5061, 5071, 5851, 5861, 5871],
+        "way_street": [5056, 5058, 5082, 5091, 5844, 5856, 5858, 5882, 5891],
+
+        "power_line": [2611, 2612],
+
+        "water_stream_class1": [441, 513],
+        "water_stream_class2": [288, 455],
+        "water_stream_class3": [456],
+
+        "building_big": [690],
+
+        "data_height_curve": [568]
+    },
+    "style_definitions": {
+        "way_highway": {
+            "description": "Highway",
+            "tags": [{"key": "way", "value": "highway"}],
+            "zoom_level": 6,
+            "render_order": 6,
+            "type": "line",
+            "style": {
+                "line_width": 1,
+                "border_width": 1,
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "color_name_len": 1,
+                "colors": [
+                    "a c #FFFFFF",
+                    "b c #E85625"
+                ],
+                "bitmap": []
+            }
+        },
+        "way_class1": {
+            "tags": [{"key": "way", "value": "class1"}],
+            "description": "Class 1 road",
+            "zoom_level": 4,
+            "render_order": 6,
+            "type": "line",
+            "style": {
+                "line_width": 2,
+                "border_width": 1,
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #F49F8A",
+                    "b c #E85625"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "way_class2": {
+            "tags": [{"key": "way", "value": "class2"}],
+            "description": "Class 2 road",
+            "zoom_level": 3,
+            "render_order": 6,
+            "type": "line",
+            "style": {
+                "line_width": 1,
+                "border_width": 1,
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #F49F8A",
+                    "b c #E85625"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "way_class3": {
+            "tags": [{"key": "way", "value": "class3"}],
+            "description": "Class 3 road",
+            "zoom_level": 3,
+            "render_order": 7,
+            "type": "line",
+            "style": {
+                "line_width": 2,
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #E85625"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "way_street": {
+            "tags": [{"key": "way", "value": "street"}],
+            "description": "Street",
+            "zoom_level": 2,
+            "render_order": 5,
+            "type": "line",
+            "style": {
+                "line_width": 1,
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #000000"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "way_street_big": {
+            "tags": [{"key": "way", "value": "street_big"}],
+            "description": "Big street",
+            "zoom_level": 2,
+            "render_order": 6,
+            "type": "line",
+            "style": {
+                "line_width": 1,
+                "border_width": 1,
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #FFFFFF",
+                    "b c #000000"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "way_trail": {
+            "tags": [{"key": "way", "value": "trail"}],
+            "description": "Trail",
+            "zoom_level": 2,
+            "render_order": 6,
+            "type": "line",
+            "style": {
+                "use_orientation":  true
+            },
+            "xpm": {
+                "width": 32,
+                "height": 1,
+                "colors": [
+                    "a c #000000",
+                    "b c none"
+                ],
+                "color_name_len": 1,
+                "bitmap": [
+                    "aabbaabbaabbaabbaabbaabbaabbaabb"
+                ]
+            }
+        },
+        "way_marked_trail": {
+            "tags": [{"key": "way", "value": "marked_trail"}],
+            "description": "Marked trail",
+            "zoom_level": 2,
+            "render_order": 6,
+            "type": "line",
+            "style": {
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 32,
+                "height": 1,
+                "colors": [
+                    "a c #000000",
+                    "b c none"
+                ],
+                "color_name_len": 1,
+                "bitmap": [
+                    "aaaabbbbaaaabbbbaaaabbbbaaaabbbb"
+                ]
+            }
+        },
+        "way_lighted_trail": {
+            "tags": [{"key": "way", "value": "lighted_trail"}],
+            "description": "Marked trail",
+            "zoom_level": 2,
+            "render_order": 6,
+            "type": "line",
+            "style": {
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 32,
+                "height": 1,
+                "colors": [
+                    "a c #93831D",
+                    "b c none"
+                ],
+                "color_name_len": 1,
+                "bitmap": [
+                    "aaaabbbbaaaabbbbaaaabbbbaaaabbbb"
+                ]
+            }
+        },
+        "way_bicycle_path": {
+            "tags": [{"key": "way", "value": "bicycle"}],
+            "description": "Bicycle path",
+            "zoom_level": 2,
+            "render_order": 6,
+            "type": "line",
+            "style": {
+                "line_width": 1,
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #000000"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "power_line": {
+            "tags": [{"key": "power", "value": "line"}],
+            "description": "Power line",
+            "zoom_level": 2,
+            "render_order": 8,
+            "type": "line",
+            "style": {
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 32,
+                "height": 5,
+                "colors": [
+                    "a c #000000",
+                    ". c none"
+                ],
+                "color_name_len": 1,
+                "bitmap": [
+                    "aa..............................",
+                    "aa..............................",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "aa..............................",
+                    "aa.............................."
+                ]
+            }
+        },
+        "water_stream_class1": {
+            "tags": [{"key": "water", "value": "stream_class1"}],
+            "description": "Water stream class 1",
+            "zoom_level": 3,
+            "render_order": 6,
+            "type": "line",
+            "style": {
+                "line_width":  2,
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #0099FF"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "water_stream_class2": {
+            "tags": [{"key": "water", "value": "stream_class2"}],
+            "description": "Water stream class 2",
+            "zoom_level": 2,
+            "render_order": 6,
+            "type": "line",
+            "style": {
+                "line_width":  1,
+                "use_orientation":  true
+            },
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #0099FF"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "water_stream_class3": {
+            "tags": [{"key": "water", "value": "stream_class3"}],
+            "description": "Water stream class 3",
+            "zoom_level": 2,
+            "render_order": 6,
+            "type": "line",
+            "style": {
+                "line_width":  1,
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #0099FF"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "data_height_curve": {
+            "tags": [{"key": "data", "value": "height_curve"}],
+            "description": "Trail",
+            "zoom_level": 0,
+            "render_order": 6,
+            "type": "line",
+            "style": {
+                "line_width":  1,
+                "use_orientation": true
+            },
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #6A5800"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "building_big": {
+            "tags": [{"key": "building", "value": "big"}],
+            "description": "Big building",
+            "zoom_level": 2,
+            "render_order": 6,
+            "type": "polygon",
+            "style": {},
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #555555"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "natural_water": {
+            "tags": [{"key": "natural", "value": "water"}],
+            "description": "Water",
+            "zoom_level": 4,
+            "render_order": 1,
+            "type": "polygon",
+            "style": {},
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #0099FF"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "natural_marsh": {
+            "tags": [{"key": "natural", "value": "marsh"}],
+            "description": "Water",
+            "zoom_level": 4,
+            "render_order": 1,
+            "type": "polygon",
+            "style": {},
+            "xpm": {
+                "width": 32,
+                "height": 32,
+                "colors": [
+                    "a   c #CAEAFF",
+                    "b   c #0099ff"
+                ],
+                "color_name_len": 1,
+                "bitmap": [
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                ]
+            }
+        },
+        "natural_forest": {
+            "tags": [{"key": "natural", "value": "forest"}],
+            "description": "Forest",
+            "zoom_level": 4,
+            "render_order": 1,
+            "type": "polygon",
+            "style": {},
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #33CC33"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "natural_field": {
+            "tags": [{"key": "natural", "value": "field"}],
+            "description": "Field",
+            "zoom_level": 3,
+            "render_order": 1,
+            "type": "polygon",
+            "style": {},
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #E3E5BB"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "landuse_residential1": {
+            "tags": [{"key": "landuse", "value": "residential1"}],
+            "description": "Residential class 1",
+            "zoom_level": 3,
+            "render_order": 1,
+            "type": "polygon",
+            "style": {},
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #BBBBBB"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "landuse_residential2": {
+            "tags": [{"key": "landuse", "value": "residential2"}],
+            "description": "Residential class 2",
+            "zoom_level": 3,
+            "render_order": 1,
+            "type": "polygon",
+            "style": {},
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #999999"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "landuse_residential3": {
+            "tags": [{"key": "landuse", "value": "residential3"}],
+            "description": "Residential class 3",
+            "zoom_level": 3,
+            "render_order": 1,
+            "type": "polygon",
+            "style": {},
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #666666"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "landuse_farmland": {
+            "tags": [{"key": "landuse", "value": "farmland"}],
+            "description": "Farm land",
+            "zoom_level": 3,
+            "render_order": 1,
+            "type": "polygon",
+            "style": {},
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #E6E38C"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "landuse_industrial": {
+            "tags": [{"key": "landuse", "value": "industrial"}],
+            "description": "Industrial",
+            "zoom_level": 3,
+            "render_order": 1,
+            "type": "polygon",
+            "style": {},
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #AB7280"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        },
+        "landuse_recreational": {
+            "tags": [{"key": "landuse", "value": "recreational"}],
+            "description": "Recreational",
+            "zoom_level": 3,
+            "render_order": 1,
+            "type": "polygon",
+            "style": {},
+            "xpm": {
+                "width": 0,
+                "height": 0,
+                "colors": [
+                    "a c #D2FDC8"
+                ],
+                "color_name_len": 1,
+                "bitmap": []
+            }
+        }
+    }
+}

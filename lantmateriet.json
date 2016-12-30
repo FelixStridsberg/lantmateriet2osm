@@ -1,0 +1,505 @@
+{
+    "shape_file": "{type}_[0-9]+\\.shp",
+    "dbase_file": "{type}_[0-9]+\\.dbf",
+    "file_definition": {
+        "al": {
+            "description": "Linjeskikt med gränser",
+            "item": {
+                "21": "Riksgräns",
+                "23": "Länsgräns",
+                "24": "Kommungräns"
+            }
+        },
+        "as": {
+            "description": "Punktsymboler för administrativ indelning",
+            "item": {
+                "65": "Riksröse"
+            }
+        },
+        "at": {
+            "description": "Administrativ text",
+            "item": {
+                "35": "Kommunenklav, storleksklass 1"
+            }
+        },
+        "bl": {
+            "description": "Linjeskikt med byggnader, övriga anläggningar och områden",
+            "item": {
+                "75": "Anläggnings- och rekreationsområde, streckad linje",
+                "76": "Anläggnings- och rekreationsområde, heldragen linje",
+                "309": "Brygga, mittlinje",
+                "337": "Dammbyggnad, större, kantlinje",
+                "339": "Pir, mittlinje",
+                "391": "Renstängsel",
+                "725": "Flygbana, obelagd"
+            }
+        },
+        "bs": {
+            "description": "Punktskikt för bebyggelsesymboler",
+            "item": {
+                "362": "Gästhamn",
+                "365": "Fyr",
+                "369": "Slussport",
+                "373": "Mast",
+                "524": "Angöringsbrygga",
+                "525": "Dammbyggnad, mindre",
+                "526": "Dammbyggnad",
+                "709": "Punkt, storleksklass 2, ej specificerad",
+                "731": "Gård",
+                "732": "Herrgård",
+                "733": "Hus, storleksklass 3",
+                "734": "Hus, storleksklass 4",
+                "735": "Hus, storleksklass 1",
+                "736": "Hus, storleksklass 2",
+                "737": "Slott",
+                "739": "Cistern och silo",
+                "740": "Såg, ”flagga” vänster",
+                "741": "Kyrka",
+                "747": "Kyrka, mindre",
+                "748": "Klockstapel",
+                "749": "Punkt, storleksklass 1, ej specificerad",
+                "753": "Väderkvarn",
+                "754": "Brädgård",
+                "755": "Såg, 'flagga' höger",
+                "756": "Vindkraftverk",
+                "757": "Skorsten",
+                "759": "Torn",
+                "762": "Begravningsplats",
+                "763": "Idrottsplats",
+                "766": "Fotbollsplan",
+                "767": "Skjutbana",
+                "768": "Mindre skjutbana",
+                "769": "Travbana",
+                "770": "Kåta",
+                "775": "Vindskydd",
+                "777": "Badplats",
+                "778": "Campingplats"
+            }
+        },
+        "by": {
+            "description": "Ytskikt för byggnader",
+            "item": {
+                "690": "Byggnadsyta, större byggnad",
+                "728": "Flygbana, belagd"
+            }
+        },
+        "fl": {
+            "description": "Linjeskikt för fornlämningar",
+            "item": {
+                "14": "Fornlämning, större (begränsningslinje)",
+                "97": "Fornlämning, linjeformad (mittlinje)",
+                "694": "Ruin, kantlinje",
+                "695": "Ruin, mittlinje",
+                "72": "Gruvhål, större"
+            }
+        },
+        "fs": {
+            "description": "Punktskikt för fornlämningssymboler",
+            "item": {
+                "341": "Milstolpe",
+                "746": "Ruin",
+                "751": "Gruvhål",
+                "773": "Fornlämning, upplysningssymbol (R-symbol)",
+                "774": "Bebyggelselämning",
+                "783": "Byggnadsminne, upplysningssymbol",
+                "784": "Minnessten, upplysningssymbol",
+                "786": "Fornlämning, mindre (punkt)",
+                "787": "Övrig kulturhistorisk lämning, mindre (punkt)"
+            }
+        },
+        "gl": {
+            "description": "Linjeskikt för jordens former och uppmätning",
+            "item": {
+                "921": "Polcirkel"
+            }
+        },
+        "gs": {
+            "description": "Punktskikt för jordens former och uppmätning",
+            "item": {
+                "811": "Triangelpunkt",
+                "821": "Fixpunkt",
+                "825": "Höjdpunkt"
+            }
+        },
+        "hl": {
+            "description": "Linjeskikt för hydrografi",
+            "item": {
+                "288": "Vattentub och vattenränna",
+                "441": "Vattendrag, kartografisk klass 1",
+                "455": "Vattendrag, kartografisk klass 2",
+                "456": "Vattendrag, kartografisk klass 3",
+                "458": "Vattendrag under markyta",
+                "513": "Fors",
+                "516": "Vattenfall"
+            }
+        },
+        "hs": {
+            "description": "Punktskikt för hydrografisymboler",
+            "item": {
+                "511": "Strömriktningspil"
+            }
+        },
+        "jl": {
+           "description": "Linjeskikt för järnvägar",
+           "item": {
+               "270": "Järnväg under byggnation",
+               "271": "Järnväg med enkelspår, ej elektrifierad",
+               "272": "Järnväg med enkelspår, elektrifierad",
+               "273": "Järnväg med dubbelspår, elektrifierad",
+               "274": "Smalspårig ej elektrifierad järnväg",
+               "275": "Smalspårig elektrifierad järnväg med enkelspår",
+               "276": "Smalspårig elektrifierad järnväg med dubbelspår",
+               "278": "Järnväg före detta",
+               "279": "Industrispår/ museijärnväg",
+               "286": "Järnväg i underfart",
+               "293": "Spårväg, tunnelbana"
+           }
+        },
+        "js": {
+           "description": "Punktskikt för järnvägssymboler",
+           "item": {
+               "351": "Station",
+               "355": "Tunnelöppning för järnväg",
+               "357": "Station på smalspårig järnväg, spårväg, tunnelbana"
+           }
+        },
+        "kl": {
+           "description": "Linjeskikt för kraftledningar",
+           "item": {
+               "2611": "Kraftledning, stam",
+               "2612": "Kraftledning, region",
+               "2670": "Transformatorstationsområde",
+               "2720": "Rörledning, pipeline"
+           }
+        },
+        "ks": {
+           "description": "Punktskikt för transformatorsymbol",
+           "item": {
+               "375": "Transformator"
+           }
+        },
+        "my": {
+           "description": "Ytskikt för heltäckande markdata",
+           "item": {
+               "1": "Vattenyta",
+               "2": "Skog, barr- och blandskog",
+               "4": "Åker",
+               "5": "Annan öppen mark",
+               "7": "Fruktodling",
+               "8": "Kalfjäll",
+               "10": "Fjällbjörkskog",
+               "12": "Sluten bebyggelse",
+               "13": "Hög bebyggelse",
+               "14": "Låg bebyggelse",
+               "15": "Industriområde",
+               "16": "Fritidsbebyggelse",
+               "17": "Annan öppen mark utan skogskontur",
+               "18": "Vattenyta med diffus strandlinje",
+               "19": "Lövskog",
+               "20": "Ej karterat område"
+           }
+        },
+        "mv": {
+           "description": "Ytskikt för vatten",
+           "item": {
+               "1": "Vattenyta",
+               "18": "Vattenyta med diffus strandlinje"
+           }
+        },
+        "mo": {
+           "description": "Ytskikt för mark och skog",
+           "item": {
+               "2": "Skog, barr- och blandskog",
+               "5": "Annan öppen mark",
+               "8": "Kalfjäll",
+               "10": "Fjällbjörkskog",
+               "17": "Annan öppen mark utan skogskontur",
+               "19": "Lövskog"
+           }
+        },
+        "ma": {
+           "description": "Ytskikt för odlad mark",
+           "item": {
+               "4": "Åker",
+               "7": "Fruktodling"
+           }
+        },
+        "mb": {
+           "description": "Ytskikt för bebyggelse",
+           "item": {
+               "12": "Sluten bebyggelse",
+               "13": "Hög bebyggelse",
+               "14": "Låg bebyggelse",
+               "15": "Industriområde",
+               "16": "Fritidsbebyggelse"
+           }
+        },
+        "ms": {
+           "description": "Ytskikt för sankmark och berg i dagen",
+           "item": {
+               "31": "Sankmark, svårframkomlig",
+               "32": "Sankmark, normal",
+               "33": "Berg i dagen",
+               "35": "Sankmark, torvtäkt",
+               "37": "Sankmark, blekvät"
+           }
+        },
+        "mx": {
+           "description": "Ytskikt för blockig mark",
+           "item": {
+               "34": "Blockig mark"
+           }
+        },
+        "ml": {
+           "description": "Linjeskikt för heltäckande markdata",
+           "item": {
+               "102": "Vattenyta - Skog",
+               "104": "Vattenyta - Åker",
+               "105": "Vattenyta - Annan öppen mark",
+               "107": "Vattenyta - Fruktodling",
+               "108": "Vattenyta - Kalfjäll",
+               "110": "Vattenyta - Fjällbjörkskog",
+               "112": "Vattenyta - Sluten bebyggelse",
+               "113": "Vattenyta - Hög bebyggelse",
+               "114": "Vattenyta - Låg bebyggelse",
+               "115": "Vattenyta - Industriområde",
+               "116": "Vattenyta - Fritidsbebyggelse",
+               "117": "Vattenyta - Annan öppen mark utan skogskontur",
+               "118": "Vattenyta - Vattenyta med diffus strandlinje",
+               "119": "Vattenyta - Lövskog",
+               "120": "Vattenyta - ej karterat område",
+               "204": "Skog - Åker",
+               "205": "Skog - Annan öppen mark",
+               "207": "Skog - Fruktodling",
+               "208": "Skog - Kalfjäll",
+               "210": "Skog - Fjällbjörkskog",
+               "212": "Skog - Sluten bebyggelse",
+               "213": "Skog - Hög bebyggelse",
+               "214": "Skog - Låg bebyggelse",
+               "215": "Skog - Industriområde",
+               "216": "Skog - Fritidsbebyggelse",
+               "217": "Skog - Annan öppen mark utan skogskontur",
+               "218": "Skog - Vattenyta med diffus strandlinje",
+               "219": "Skog - Lövskog",
+               "220": "Skog - ej karterat område",
+               "405": "Åker - Annan öppen mark",
+               "407": "Åker - Fruktodling",
+               "408": "Åker - Kalfjäll",
+               "410": "Åker - Fjällbjörkskog",
+               "412": "Åker - Sluten bebyggelse",
+               "413": "Åker - Hög bebyggelse",
+               "414": "Åker - Låg bebyggelse",
+               "415": "Åker - Industriområde",
+               "416": "Åker - Fritidsbebyggelse",
+               "417": "Åker - Annan öppen mark utan skogskontur",
+               "418": "Åker - Vattenyta med diffus strandlinje",
+               "419": "Åker - Lövskog",
+               "420": "Åker - Ej karterat område",
+               "507": "Annan öppen mark - Fruktodling",
+               "508": "Annan öppen mark - Kalfjäll",
+               "510": "Annan öppen mark - Fjällbjörkskog",
+               "512": "Annan öppen mark - Sluten bebyggelse",
+               "513": "Annan öppen mark - Hög bebyggelse",
+               "514": "Annan öppen mark - Låg bebyggelse",
+               "515": "Annan öppen mark - Industriområde",
+               "516": "Annan öppen mark - Fritidsbebyggelse",
+               "517": "Annan öppen mark - Annan öppen mark utan skogskontur",
+               "518": "Annan öppen mark - Vattenyta med diffus strandlinje",
+               "519": "Annan öppen mark - Lövskog",
+               "520": "Annan öppen mark - Ej karterat område",
+               "712": "Fruktodling - Sluten bebyggelse",
+               "713": "Fruktodling - Hög bebyggelse",
+               "714": "Fruktodling - Låg bebyggelse",
+               "715": "Fruktodling - Industriområde",
+               "716": "Fruktodling - Fritidsbebyggelse",
+               "717": "Fruktodling - Annan öppen mark utan skogskontur",
+               "718": "Fruktodling - Vattenyta med diffus strandlinje",
+               "719": "Fruktodling - Lövskog",
+               "720": "Fruktodling - Ej karterat område",
+               "810": "Kalfjäll - Sluten bebyggelse",
+               "813": "Kalfjäll - Hög bebyggelse",
+               "814": "Kalfjäll - Låg bebyggelse",
+               "815": "Kalfjäll - Industriområde",
+               "816": "Kalfjäll - Fritidsbebyggelse",
+               "817": "Kalfjäll - Annan öppen mark utan skogskontur",
+               "818": "Kalfjäll - Vattenyta med diffus strandlinje",
+               "819": "Kalfjäll - Lövskog",
+               "820": "Kalfjäll - Ej karterat område",
+               "1013": "Fjällbjörkskog - Hög bebyggelse",
+               "1014": "Fjällbjörkskog - Låg bebyggelse",
+               "1015": "Fjällbjörkskog - Industriområde",
+               "1016": "Fjällbjörkskog - Fritidsbebyggelse",
+               "1017": "Fjällbjörkskog - Annan öppen mark utan skogskontur",
+               "1018": "Fjällbjörkskog - Vattenyta med diffus strandlinje",
+               "1019": "Fjällbjörkskog - Lövskog",
+               "1020": "Fjällbjörkskog - Ej karterat område",
+               "1213": "Sluten bebyggelse - Hög bebyggelse",
+               "1214": "Sluten bebyggelse - Låg bebyggelse",
+               "1215": "Sluten bebyggelse - Industriområde",
+               "1216": "Sluten bebyggelse - Fritidsbebyggelse",
+               "1217": "Sluten bebyggelse - Annan öppen mark utan skogskontur",
+               "1218": "Sluten bebyggelse - Vattenyta med diffus strandlinje",
+               "1219": "Sluten bebyggelse - Lövskog",
+               "1220": "Sluten bebyggelse - Ej karterat område",
+               "1314": "Hög bebyggelse - Låg bebyggelse",
+               "1315": "Hög bebyggelse - Industriområde",
+               "1316": "Hög bebyggelse - Fritidsbebyggelse",
+               "1317": "Hög bebyggelse - Annan öppen mark utan skogskontur",
+               "1318": "Hög bebyggelse - Vattenyta med diffus strandlinje",
+               "1319": "Hög bebyggelse - Lövskog",
+               "1320": "Hög bebyggelse - Ej karterat område",
+               "1415": "Låg bebyggelse - Industriområde",
+               "1416": "Låg bebyggelse - Fritidsbebyggelse",
+               "1417": "Låg bebyggelse - Annan öppen mark utan skogskontur",
+               "1418": "Låg bebyggelse - Vattenyta med diffus strandlinje",
+               "1419": "Låg bebyggelse - Lövskog",
+               "1420": "Låg bebyggelse - Ej karterat område",
+               "1516": "Industriområde - Fritidsbebyggelse",
+               "1517": "Industriområde - Annan öppen mark utan skogskontur",
+               "1518": "Industriområde - Vattenyta med diffus strandlinje",
+               "1519": "Industriområde - Lövskog",
+               "1520": "Industriområde - Ej karterat område",
+               "1617": "Fritidsbebyggelse - Annan öppen mark utan skogskontur",
+               "1618": "Fritidsbebyggelse - Vattenyta med diffus strandlinje",
+               "1619": "Fritidsbebyggelse - Lövskog",
+               "1718": "Annan öppen mark utan skogskontur - Vattenyta med diffus strandlinje",
+               "1719": "Annan öppen mark utan skogskontur - Lövskog",
+               "1720": "Annan öppen mark utan skogskontur - Ej karterat område",
+               "1819": "Vattenyta med diffus strandlinje - Lövskog",
+               "1820": "Vattenyta med diffus strandlinje - Ej karterat område",
+               "1920": "Lövskog - Ej karterat område"
+           }
+        },
+        "ms": {
+           "description": "Linjeskikt för vegetation",
+           "item": {
+               "447": "Träd- och buskridå"
+           }
+        },
+        "ss": {
+           "description": "Punktskikt för vegetation",
+           "item": {
+               "451": "Ströskog"
+           }
+        },
+        "nl": {
+           "description": "Linjeskikt för naturvård",
+           "item": {
+               "11": "Nationalpark",
+               "12": "Naturreservat",
+               "19": "Övriga reservat",
+               "54": "Nationalpark, sammanfallande med annan gräns",
+               "55": "Naturreservat, sammanfallande med annan gräns",
+               "56": "Övriga reservat, sammanfallande med annan gräns",
+               "57": "Djurskyddsområde, sammanfallande med annan gräns",
+               "70": "Naturreservat, mittlinje",
+               "72": "Djurskyddsområde",
+               "73": "Kulturreservat",
+               "74": "Kulturreservat, sammanfallande med annan gräns",
+               "79": "Naturreservat, mittlinje, sammanfallande med annan gräns",
+               "98": "Förbjudet område för terrängfordon"
+           }
+        },
+        "ns": {
+           "description": "Punktskikt för naturvårdssymboler",
+           "item": {
+               "781": "Biologiskt naturminne, upplysningssymbol",
+               "782": "Geologiskt naturminne, upplysningssymbol",
+               "785": "Naturminne, geologiskt eller biologiskt"
+           }
+        },
+        "ql": {
+           "description": "Linjeskikt för militära områden",
+           "item": {
+               "16": "Militärt skyddsområde",
+               "17": "Militärt skjutfält",
+               "58": "Militärt övningsfält, sammanfallande med annan gräns",
+               "59": "Militärt skjutfält, sammanfallande med annan gräns",
+               "96": "Militärt övningsfält"
+           }
+        },
+        "vl": {
+           "description": "Linjeskikt för vägar, allmänna och enskilda",
+           "item": {
+               "336": "Färjeled",
+               "5011": "Motorväg",
+               "5014": "Allmän väg under byggnation",
+               "5022": "Allmän väg klass 1",
+               "5025": "Allmän väg klass 2",
+               "5029": "Allmän väg klass 3",
+               "5032": "På- och avfartsväg klass 1",
+               "5033": "På- och avfartsväg klass 2",
+               "5034": "På- och avfartsväg klass 3",
+               "5044": "Genomfartsgata, -led",
+               "5051": "Gata, större",
+               "5056": "Gata",
+               "5058": "Gata i sluten bebyggelse",
+               "5061": "Bättre bilväg",
+               "5071": "Bilväg",
+               "5082": "Sämre bilväg",
+               "5091": "Uppfartsväg",
+               "5811": "Motorväg, i underfart",
+               "5822": "Allmän väg klass 1 i underfart",
+               "5825": "Allmän väg klass 2, i underfart",
+               "5829": "Allmän väg klass 3, i underfart",
+               "5832": "På- och avfartsväg klass 1, i underfart",
+               "5833": "På- och avfartsväg klass 2, i underfart",
+               "5834": "På- och avfartsväg klass 3, i underfart",
+               "5844": "Genomfartsgata, -led, i underfart",
+               "5851": "Gata, större, i underfart",
+               "5856": "Gata, i underfart",
+               "5858": "Gata i sluten bebyggelse, i underfart",
+               "5861": "Bättre bilväg, i underfart",
+               "5871": "Bilväg, i underfart",
+               "5882": "Sämre bilväg, i underfart",
+               "5891": "Uppfartsväg, i underfart"
+           }
+        },
+        "vo": {
+           "description": "Linjeskikt för övriga vägar",
+           "item": {
+               "264": "Gångstig",
+               "265": "Vandringsled",
+               "266": "Elljusspår",
+               "268": "Vandringsled, längs väg",
+               "284": "Linbana",
+               "332": "Gångbro och spång",
+               "5095": "Traktorväg",
+               "5098": "Cykelväg, parkväg",
+               "5899": "Underfart för övrig väg eller led"
+           }
+        },
+        "vs": {
+           "description": "Punktskikt för vägsymboler",
+           "item": {
+               "323": "Öppningsbar bro",
+               "343": "Tunnelöppning för väg",
+               "345": "Vägbom",
+               "346": "Vändplan",
+               "776": "Rastplats"
+           }
+        },
+        "oh": {
+           "description": "Linjeskikt för höjdkurvor",
+           "item": {
+               "568": "Höjdkurva, normal",
+               "571": "Höjdkurva, stöd för varje 25 m intervall",
+               "575": "Sänka/gropkurva, normal",
+               "576": "Sänka/gropkurva, stöd för varje 25 m intervall",
+               "598": "Skärning"
+           }
+        },
+        "os": {
+           "description": "Punktskikt för höjdinformation",
+           "item": {
+               "577": "Gropstreck"
+           }
+        },
+        "ot": {
+           "description": "Textskikt för höjdtext",
+           "item": {
+               "99": "Höjdkurvsiffra"
+           }
+        }
+    }
+}
