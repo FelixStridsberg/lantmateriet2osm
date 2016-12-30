@@ -1,9 +1,7 @@
 {
     "items": {
         "natural_water": [1],
-        "natural_marsh": [18]
-    },
-    "debug": {
+        "natural_marsh": [18],
         "natural_forest": [2, 19],
         "natural_field": [5, 17],
 
