@@ -57,6 +57,12 @@ let kkods_in_use t =
     List.map (fun (kkod, _, _) -> kkod) |>
       List.sort_uniq (fun a b -> a - b)
 
+let style_defs_in_use t =
+  let kkods = kkods_in_use t in
+  let items = List.map (fun kkod -> Hashtbl.find t.style_items kkod) kkods in
+  let uniq_items = List.sort_uniq (fun a b -> String.compare a b) items in
+  List.map (fun item -> Hashtbl.find t.style_def item) uniq_items
+
 let get_file_paths t path =
   let find_file files file_type file_match =
     let type_reg = Str.regexp "\\{type\\}" in

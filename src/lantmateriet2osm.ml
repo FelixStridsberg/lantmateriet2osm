@@ -57,7 +57,7 @@ let () =
     read_all settings files osm;
     Osm.close osm;
     print_endline "\nSaving styles...";
-    Style.write_styles (Settings.style_def settings) "styles/";
+    Style.write_styles (Settings.style_defs_in_use settings) "styles/";
     print_endline "All done!"
   with
     | Failure e ->

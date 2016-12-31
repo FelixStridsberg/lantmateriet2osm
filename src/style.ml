@@ -80,7 +80,7 @@ let write_styles style_definitions directory =
   let polygons_def = ref [] in
   let point_id = ref 0xFF in
   let id = ref 0 in
-  Hashtbl.iter (fun _ style ->
+  List.iter (fun style ->
     let add_point () =
       point_id := !point_id + 1;
       typ_def := typ_string_of_style !point_id style :: !typ_def;
