@@ -27,6 +27,7 @@ type poly = {
 type shape = Point of point | Polyline of poly | Polygon of poly
 
 let validate_shp_sign input =
+  (* TODO, don't assert here, throw usefull failure string *)
   assert(input_byte input = 0x00);
   assert(input_byte input = 0x00);
   assert(input_byte input = 0x27);
@@ -86,7 +87,7 @@ let make shp dbf =
   { input; dbase; }
 
 let read_shape input =
-  ignore (really_input_string input 8); (* Record length, content length *)
+  let _ = really_input_string input 8 in (* Record length, content length *)
   let shape_type = input_i32le input in
   match shape_type with
   | 1 -> Point (read_point input)

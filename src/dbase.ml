@@ -36,19 +36,20 @@ let read_record_header input =
         let null_regexp = Str.regexp "\x00" in
         let field_name = Str.global_replace null_regexp "" (really_input_string input 10) in
         let field_type = input_char input in
-        for i = 1 to 4 do ignore (input_byte input); done; (* address in memory *)
+        let _ = really_input_string input 4 in (* address in memory *)
         let field_length = input_byte input in
-        let dec_count = input_byte input in (* Decimal count, don't need it *)
-        for i = 1 to 14 do ignore (input_byte input); done; (* lan, reserved and stuff *)
-        {
-            name = (Char.escaped (Char.chr first_byte)) ^ field_name;
-            field_type = match field_type with
-                | 'C' -> (StringField field_length)
-                | 'N' -> if dec_count = 0
-                         then (IntField field_length)
-                         else (FloatField field_length)
-                | _ -> raise @@  DbTypeError ("Unsupported type: " ^ (Char.escaped field_type))
-        } :: aux ()
+        let dec_count = input_byte input in
+        let _ =really_input_string input 14 in (* lan, reserved and stuff *)
+        let name = (Char.escaped (Char.chr first_byte)) ^ field_name in
+        let field_type =
+          match field_type with
+          | 'C' -> (StringField field_length)
+          | 'N' -> if dec_count = 0
+                   then (IntField field_length)
+                   else (FloatField field_length)
+          | _ -> raise @@  DbTypeError ("Unsupported type: " ^ (Char.escaped field_type))
+        in
+        { name; field_type } :: aux ()
     ) in
   let fields = aux () in
   { fields; }
@@ -93,9 +94,9 @@ let get_string record name =
 
 let make filename =
   let input = open_in filename in
-  ignore (really_input_string input 4);
+  let _ = really_input_string input 4 in
   let record_count = input_i32le input in
-  ignore (really_input_string input 24);
+  let _ = really_input_string input 24 in
   let header = read_record_header input in
   { input; record_count; header; }
 
