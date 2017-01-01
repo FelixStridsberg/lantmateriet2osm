@@ -1,16 +1,11 @@
 {
     "items": {
+        "natural_field": [5, 17],
         "natural_water": [1],
         "natural_marsh": [18],
         "natural_forest": [2, 19],
+        "natural_forest": [2, 19],
         "natural_field": [5, 17],
-
-        "landuse_farmland": [4, 7],
-        "landuse_residential3": [12],
-        "landuse_residential2": [13],
-        "landuse_residential1": [14],
-        "landuse_industrial": [15, 2670],
-        "landuse_recreational": [16],
 
         "way_trail": [264, 5095],
         "way_marked_trail": [265, 268],
@@ -22,18 +17,50 @@
         "way_class3": [5029, 5034, 5829, 5834],
         "way_street_big": [5051, 5061, 5071, 5851, 5861, 5871],
         "way_street": [5056, 5058, 5082, 5091, 5844, 5856, 5858, 5882, 5891],
+        "road_barrier": [345],
 
-        "power_line": [2611, 2612],
+        "landuse_farmland": [4, 7],
+        "landuse_residential3": [12],
+        "landuse_residential2": [13],
+        "landuse_residential1": [14],
+        "landuse_industrial": [15, 2670],
+        "landuse_recreational": [16],
 
         "water_stream_class1": [441, 513],
         "water_stream_class2": [288, 455],
         "water_stream_class3": [456],
 
+        "power_line": [2611, 2612],
         "building_big": [690],
 
         "data_height_curve": [568]
     },
     "style_definitions": {
+        "road_barrier": {
+            "description": "Road barrier",
+            "tags": [{"key": "barrier", "value": "gate"}],
+            "zoom_level": 2,
+            "render_order": 6,
+            "type": "point",
+            "style": {},
+            "xpm": {
+                "width": 10,
+                "height": 5,
+                "color_name_len": 1,
+                "colors": [
+                    "a  c #000000",
+                    ".  c #FFFFFF",
+                    "   c none"
+                ],
+                "bitmap": [
+                    "...    ...",
+                    ".a......a.",
+                    ".aaaaaaaa.",
+                    ".a......a.",
+                    "...    ..."
+                ]
+            }
+        },
         "way_highway": {
             "description": "Highway",
             "tags": [{"key": "way", "value": "highway"}],
@@ -81,7 +108,7 @@
         "way_class2": {
             "tags": [{"key": "way", "value": "class2"}],
             "description": "Class 2 road",
-            "zoom_level": 3,
+            "zoom_level": 4,
             "render_order": 6,
             "type": "line",
             "style": {
